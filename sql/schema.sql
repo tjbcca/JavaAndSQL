@@ -1,0 +1,11 @@
+CREATE TABLE Books (
+    BookID SERIAL PRIMARY KEY,
+    BookName VARCHAR(255),
+    Author VARCHAR(255)
+);
+CREATE TABLE Members (
+    MemberID SERIAL PRIMARY KEY,
+    MemberName VARCHAR(255),
+    BookID INT,
+    FOREIGN KEY (BookID) REFERENCES Books(BookID)
+);
